@@ -16,9 +16,16 @@ const diplomasGetById = async(req = request, res = response) => {
         console.log(diploma);
 
         //Mensaje de respuesta
-        res.json({
-            diploma
-        });        
+        if (diploma) {
+            
+            res.json({
+                diploma
+            });        
+        }else{
+            res.json({
+                msg:"El diploma no se encontro"
+            })
+        }
     } catch (error) {
         console.log(error);
         res.json({

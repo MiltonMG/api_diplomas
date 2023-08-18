@@ -18,7 +18,7 @@ const DiplomaSchema = Schema({
         require: [true, 'El nombre es obligatorio']
     },
     unidades: {
-        type: String,
+        type: Array,
         require: [true, 'El numero de unidades valorativas es obligatorio']
     },
     curso: {
